@@ -52,7 +52,7 @@
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
     section:nth-child(even) {
@@ -66,6 +66,16 @@
       max-width: 100%;
       border-radius: 8px;
       margin: 1rem 0;
+    }
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .image-grid img {
+      width: 45%;
+      min-width: 260px;
     }
     form input, form button {
       padding: 0.7rem;
@@ -106,7 +116,10 @@
 
   <section>
     <h2>See It</h2>
-    <img src="mockup-shirt.jpg" alt="InsideOut reversible shirt mockup">
+    <div class="image-grid">
+      <img src="Teal-lavender-set.png" alt="Girl wearing lavender-teal InsideOut set">
+      <img src="Green-red-yellow-set.png" alt="Boy wearing rainbow InsideOut set">
+    </div>
     <a href="#waitlist" class="btn">👉 Join the Waitlist – Vote + Get 25% Off</a>
   </section>
 
