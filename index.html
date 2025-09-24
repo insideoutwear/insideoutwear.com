@@ -96,6 +96,54 @@
     }
     .faq p {margin-bottom:1rem;}
     .faq strong {display:block;margin-bottom:0.3rem;}
+
+    /* New styling for signup + survey card */
+    .signup-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+    .signup-form,
+    .survey-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .signup-form input,
+    .survey-form label {
+      width: 100%;
+      margin: 0.3rem 0;
+    }
+    .signup-form button,
+    .survey-form button {
+      width: 100%;
+      margin-top: 0.8rem;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .survey-title {
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+    .survey-sub {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .survey-form label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0.2rem 0;
+    }
   </style>
 </head>
 <body>
@@ -117,7 +165,7 @@
   <section>
     <h2>See It</h2>
     <div class="image-grid">
-      <!-- Recommended: compress to around 1200px wide, 150–250 KB each for fast loading -->
+      <!-- Recommended: compress images to ~1200px width and 150–250 KB each -->
       <img src="Teal-lavender-set.png" alt="Girl wearing lavender-teal InsideOut set">
       <img src="Green-red-yellow-set.png" alt="Boy wearing rainbow InsideOut set">
     </div>
@@ -127,29 +175,5 @@
     <h2>Get First Access + Help Shape the Line</h2>
     <p>Join the waitlist to vote on what we launch first and get a special discount when we go live.</p>
 
-    <form action="https://formspree.io/f/xnnganop" method="POST">
-      <input type="email" name="email" placeholder="Your email" required />
-      <button type="submit">Join Now</button>
-    </form>
-
-    <h3 style="margin-top:2rem;">Quick Question</h3>
-    <p>Which item would you be most excited to see first?</p>
-    <form action="https://formspree.io/f/xjkabkow" method="POST">
-      <label><input type="radio" name="interest" value="2Way Tee" required> 2Way Tee</label><br>
-      <label><input type="radio" name="interest" value="4Way Tee"> 4Way Tee</label><br>
-      <label><input type="radio" name="interest" value="Hoodie"> Hoodie</label><br>
-      <label><input type="radio" name="interest" value="Pants"> Pants</label><br>
-      <label><input type="radio" name="interest" value="Beanie"> Beanie</label><br><br>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <section class="faq">
-    <h2>FAQ</h2>
-    <p><strong>What fabric do you use?</strong>Soft cotton-blend with stretch, flat seams, and no tags for sensory comfort.</p>
-    <p><strong>Machine washable?</strong>Yes – built for repeated washing and long-term wear.</p>
-    <p><strong>How much does it cost?</strong>Tees $24, Hoodies $60, Pants $35. Designed for double-use and long wear.</p>
-    <p><strong>Who is this for?</strong>Kids ages 4+ and their parents who want stress-free, sensory-friendly dressing.</p>
-  </section>
-</body>
-</html>
+    <div class="signup-card">
+      <!-- Email for
