@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,125 +10,80 @@
     :root{
       --bg:#f9fafb;
       --text:#333;
-      --brand:#6f42c1;        /* purple primary */
+      --brand:#6f42c1;           /* main purple for buttons */
       --brand-dark:#5931a8;
-      --accent:#1976d2;       /* blue accent for headings */
+      --accent:#1976d2;
+      --lavender:#ede7f6;        /* soft lavender header background */
       --muted:#555;
       --card:#fff;
-      --shadow:0 6px 18px rgba(0,0,0,.08);
       --radius:12px;
+      --shadow:0 6px 18px rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
-    body{
-      margin:0; color:var(--text); background:var(--bg);
-      font-family:'Poppins',sans-serif; line-height:1.6;
-    }
+    body{margin:0;font-family:'Poppins',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
     header{
-      padding:3rem 1.25rem 2.25rem; text-align:center; position:relative;
-      background:linear-gradient(180deg,#efe9fb 0%, #f3f5ff 100%);
-      overflow:hidden;
+      padding:3rem 1.25rem 2.25rem;
+      text-align:center;
+      background:var(--lavender);
     }
-    header h1{
-      margin:0 auto .75rem; font-size:2.1rem; max-width:900px; font-weight:700;
-    }
-    header p.lead{
-      margin:.25rem auto 1.25rem; font-size:1.1rem; max-width:850px;
-    }
+    header h1{margin:0 auto .75rem;max-width:900px;font-size:2.3rem;font-weight:700;}
+    header p.lead{margin:.25rem auto 1.25rem;max-width:850px;font-size:1.15rem;}
     .btn{
-      display:inline-block; padding:.9rem 1.4rem; font-weight:600;
-      background:var(--brand); color:#fff; text-decoration:none; border-radius:10px;
-      transition:transform .05s ease, background .2s ease; border:none; cursor:pointer;
+      display:inline-block;padding:.9rem 1.4rem;font-weight:600;
+      background:var(--brand);color:#fff;text-decoration:none;border-radius:10px;
+      transition:background .2s ease;cursor:pointer;border:none;
     }
-    .btn:hover{ transform:translateY(-1px); background:var(--brand-dark); }
-    .tagline{ margin:.75rem 0 0; color:#444; font-size:.95rem; }
-    section{ padding:2.25rem 1.25rem; max-width:980px; margin:0 auto; }
-    h2{ color:var(--accent); margin:0 0 1rem; font-size:1.6rem; }
-    .media{
-      display:grid; gap:1.25rem; grid-template-columns:1fr; align-items:start;
+    .btn:hover{background:var(--brand-dark);}
+    .tagline{margin:.8rem 0 0;font-size:.95rem;color:#444;}
+    section{padding:2.25rem 1.25rem;max-width:980px;margin:0 auto;}
+    h2{color:var(--accent);margin:0 0 1rem;font-size:1.7rem;}
+    img{max-width:100%;border-radius:10px;display:block;}
+    .image-pair{
+      display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;
+      margin-top:1rem;
     }
-    .media .image-grid{
-      display:grid; gap:1rem; grid-template-columns:1fr; 
+    .image-pair figure{
+      flex:1 1 300px;max-width:400px;
+      background:var(--card);padding:.5rem;border-radius:var(--radius);box-shadow:var(--shadow);
     }
-    .image-grid figure{
-      margin:0; background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
-      padding:0.5rem 0.5rem 0.9rem;
-    }
-    .image-grid img{
-      width:100%; display:block; border-radius:10px;
-    }
-    .image-grid figcaption{
-      margin:.6rem .65rem 0; font-size:.95rem; color:#222;
-    }
-    .center-note{ margin:1.2rem 0 0; text-align:center; font-weight:600; }
-    .cta-center{ text-align:center; margin-top:1rem; }
+    .image-pair figcaption{margin:.5rem .5rem 0;font-weight:600;font-size:.95rem;text-align:center;}
+    .center-note{text-align:center;margin:1.2rem 0 0;font-weight:600;}
+    .cta-center{text-align:center;margin-top:1.3rem;}
     .quote-cards{
-      display:grid; gap:1rem; grid-template-columns:1fr; margin-top:1rem;
+      display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1rem;
     }
     .quote{
-      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
-      padding:1rem 1rem 1rem 1.1rem; position:relative;
+      flex:1 1 280px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:1rem;max-width:420px;
     }
-    .quote.purple{ border-left:10px solid #7e57c2; }
-    .quote.red{ border-left:10px solid #e53935; }
-    .quote em{ color:#222; font-style:italic; }
-
-    /* Signup + Survey card */
+    .quote.purple{border-left:8px solid #7e57c2;}
+    .quote.red{border-left:8px solid #e53935;}
     .signup-card{
-      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
-      padding:1.25rem; max-width:560px; margin:1.5rem auto 0;
+      background:var(--card);padding:1.5rem;border-radius:var(--radius);
+      box-shadow:var(--shadow);max-width:560px;margin:1.5rem auto 0;
     }
-    .stack{ display:flex; flex-direction:column; gap:1rem; }
-    .signup-form, .survey-form{ display:flex; flex-direction:column; align-items:stretch; }
+    .signup-form,.survey-form{display:flex;flex-direction:column;align-items:stretch;}
     .signup-form input{
-      padding:.8rem; border:1px solid #d0d7de; border-radius:10px; font-size:1rem; width:100%;
+      padding:.8rem;border:1px solid #ccc;border-radius:10px;font-size:1rem;margin-bottom:.6rem;
     }
-    .signup-form button,
-    .survey-form button{
-      margin-top:.5rem; padding:.85rem; font-size:1rem; border:none; border-radius:10px;
-      background:var(--brand); color:#fff; font-weight:600; cursor:pointer;
+    .signup-form button,.survey-form button{
+      padding:.9rem;border:none;border-radius:10px;background:var(--brand);
+      color:#fff;font-weight:600;font-size:1rem;cursor:pointer;
     }
-
-    /* Survey table with tooltips */
-    .survey-title{ font-weight:700; margin-top:.25rem; }
-    .survey-sub{ color:var(--muted); margin:.2rem 0 0.8rem; }
+    .survey-title{font-weight:700;margin-top:1.3rem;}
+    .survey-sub{color:var(--muted);margin:.3rem 0 1rem;}
     .survey-table{
-      width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius:10px;
-      border:1px solid #e5e7eb; background:#fff;
+      width:100%;border-collapse:collapse;margin-bottom:.9rem;
     }
-    .survey-table thead th{
-      text-align:left; font-weight:600; padding:.7rem .85rem; background:#f7f7fb; font-size:.95rem;
-      border-bottom:1px solid #ececf5;
-    }
-    .survey-table td{
-      padding:.65rem .85rem; vertical-align:middle; border-bottom:1px solid #f1f1f6;
-    }
-    .survey-table tr:last-child td{ border-bottom:none; }
-    .prod-label{ display:flex; align-items:center; gap:.6rem; }
-    .prod-label input{ transform:scale(1.15); }
-    .tip{
-      color:#222; font-size:.92rem;
-      display:flex; align-items:center; gap:.4rem;
-    }
-    .tip .bubble{
-      display:inline-grid; place-items:center; width:18px; height:18px; border-radius:50%;
-      background:#ece9ff; color:#5a45c6; font-size:.75rem; font-weight:700; flex:0 0 18px;
-    }
+    .survey-table td{padding:.6rem;border-bottom:1px solid #eee;}
+    .prod-label{display:flex;align-items:center;gap:.6rem;}
+    .tip{font-size:.92rem;color:#444;}
     .success{
-      margin-top:.6rem; background:#eefaf0; color:#135b2f; border:1px solid #bce7c8;
-      padding:.7rem .9rem; border-radius:10px; font-size:.95rem;
+      margin-top:.8rem;background:#eefaf0;color:#135b2f;border:1px solid #bce7c8;
+      padding:.8rem;border-radius:10px;font-size:.95rem;
     }
-
-    /* FAQ */
-    .faq p{ margin:.85rem 0; }
-    .faq strong{ display:block; margin-bottom:.25rem; }
-
-    /* Responsive */
-    @media (min-width:740px){
-      header h1{ font-size:2.4rem; }
-      .media{ grid-template-columns:1.1fr; }
-      .image-grid{ grid-template-columns:1fr 1fr; }
-      .quote-cards{ grid-template-columns:1fr 1fr; }
-    }
+    .faq p{margin:.85rem 0;}
+    .faq strong{display:block;margin-bottom:.25rem;}
   </style>
 </head>
 <body>
@@ -135,151 +91,87 @@
   <!-- HERO -->
   <header>
     <h1>No Tags. No Stress. No Wrong Way to Wear It.<br/>
-      Reversible, sensory-friendly clothes for kids who struggle with dressing.</h1>
+        Reversible, sensory-friendly clothes for kids who struggle with dressing.</h1>
     <p class="lead">Soft, tag-free clothes that give your child confidence — and give you back calm mornings.</p>
-    <p>
-      <a href="#waitlist" class="btn">Get 25% Off – Join the Waitlist</a>
-    </p>
+    <p><a href="#waitlist" class="btn">Get 25% Off – Join the Waitlist</a></p>
     <p class="tagline">👉 Be first. Save 25%. Help shape the launch.</p>
   </header>
 
-  <!-- VISUALS + CAPTIONS -->
-  <section aria-labelledby="right-side">
-    <h2 id="right-side">What If Every Side Was the Right Side?</h2>
+  <!-- OUR STORY -->
+  <section id="our-story">
+    <h2>Our Story</h2>
+    <p>My 13-year-old autistic son has a 1-in-4 chance of getting dressed the “right” way.</p>
+    <p>The rest of the time? His shirt is backwards, inside out — or both. It adds stress, especially on school mornings.</p>
+    <p>I created InsideOut Clothing so every side is the right side: tagless, soft, reversible tees and hoodies made for sensory comfort and total independence.</p>
+    <p>Now he gets dressed on his own. No fights. No stress. Just confidence.</p>
+  </section>
 
-    <div class="media">
-      <div class="image-grid">
-        <figure>
-          <img src="Teal-lavender-se.jpg" alt="InsideOut set in teal and lavender, reversible and sensory-friendly">
-          <figcaption><strong>Independence and confidence look good.</strong></figcaption>
-        </figure>
-        <figure>
-          <img src="Green-red-yellow-set.jpg" alt="InsideOut set in green, red, and yellow—reversible, tag-free">
-          <figcaption><strong>He dressed himself in 10 seconds.</strong> No help. No stress.</figcaption>
-        </figure>
-      </div>
+  <!-- VISUALS -->
+  <section id="visuals">
+    <h2>What If Every Side Was the Right Side?</h2>
+    <div class="image-pair">
+      <figure>
+        <img src="Teal-lavender-set.png" alt="InsideOut set in teal and lavender">
+        <figcaption>Independence and confidence look good.</figcaption>
+      </figure>
+      <figure>
+        <img src="Green-red-yellow-set.png" alt="InsideOut set in green, red, and yellow">
+        <figcaption>He dressed himself in 10 seconds. No help. No stress.</figcaption>
+      </figure>
     </div>
-
     <p class="center-note">Built for comfort. Created by a mom who gets it.</p>
     <div class="cta-center">
       <a href="#waitlist" class="btn">Get 25% Off – Join the Waitlist</a>
     </div>
-
-    <!-- Benefit quotes -->
-    <div style="margin-top:1.75rem">
-      <h2 style="margin-bottom:.4rem">What If Every Side Was the Right Side?</h2>
-      <p style="margin-top:0">Clothes made to reduce stress, not cause it.</p>
-      <div class="quote-cards">
-        <div class="quote purple">
-          <em>“She finally dressed herself — no wrong side, no meltdowns.”</em>
-        </div>
-        <div class="quote red">
-          <em>“Sensory-friendly and 4-way wearable. This shirt just works.”</em>
-        </div>
-      </div>
-      <div class="cta-center" style="margin-top:1rem;">
-        <a href="#waitlist" class="btn">Get 25% Off – Join the Waitlist</a>
-      </div>
+    <div class="quote-cards">
+      <div class="quote purple"><em>“She finally dressed herself — no wrong side, no meltdowns.”</em></div>
+      <div class="quote red"><em>“Sensory-friendly and 4-way wearable. This shirt just works.”</em></div>
     </div>
   </section>
 
   <!-- SIGNUP + SURVEY -->
-  <section id="waitlist" aria-labelledby="early-access">
-    <h2 id="early-access">Get First Access + Help Shape the Line</h2>
+  <section id="waitlist">
+    <h2>Get First Access + Help Shape the Line</h2>
     <p>Join the waitlist to vote on what we launch first and get a special discount when we go live.</p>
 
     <div class="signup-card">
-      <div class="stack">
-        <!-- Email form -->
-        <form id="signup-form" action="https://formspree.io/f/xnnganop" method="POST" class="signup-form">
-          <input type="email" name="email" placeholder="Your email" autocomplete="email" required/>
-          <button type="submit">Join Now</button>
-        </form>
-        <div id="signup-success" class="success" hidden aria-live="polite">
-          Thanks for joining! You’re on the early access list — we’ll email you first.
-        </div>
+      <form id="signup-form" action="https://formspree.io/f/xnnganop" method="POST" class="signup-form">
+        <input type="email" name="email" placeholder="Your email" required/>
+        <button type="submit">Join Now</button>
+      </form>
+      <div id="signup-success" class="success" hidden>
+        Thanks for joining! You’re on the early access list — we’ll email you first.
+      </div>
 
-        <!-- Survey -->
-        <form id="survey-form" action="https://formspree.io/f/xjkabkow" method="POST" class="survey-form">
-          <p class="survey-title">What Would Help Your Child Most?</p>
-          <p class="survey-sub">Vote below — we’re building this with you.</p>
-
-          <table class="survey-table" role="table" aria-label="Product vote">
-            <thead>
-              <tr><th>Product</th><th>Tooltip</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <label class="prod-label">
-                    <input type="radio" name="interest" value="2Way Tee" required/>
-                    2Way Tee
-                  </label>
-                </td>
-                <td>
-                  <span class="tip"><span class="bubble">i</span> Wear it front or back — both work</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="prod-label">
-                    <input type="radio" name="interest" value="4Way Tee"/>
-                    4Way Tee
-                  </label>
-                </td>
-                <td>
-                  <span class="tip"><span class="bubble">i</span> Front, back, inside out — every way works</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="prod-label">
-                    <input type="radio" name="interest" value="Hoodie"/>
-                    Hoodie
-                  </label>
-                </td>
-                <td>
-                  <span class="tip"><span class="bubble">i</span> Reversible, cozy, and tag-free</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="prod-label">
-                    <input type="radio" name="interest" value="Pants"/>
-                    Pants
-                  </label>
-                </td>
-                <td>
-                  <span class="tip"><span class="bubble">i</span> Sensory-friendly, pull-on comfort</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="prod-label">
-                    <input type="radio" name="interest" value="Beanie"/>
-                    Beanie
-                  </label>
-                </td>
-                <td>
-                  <span class="tip"><span class="bubble">i</span> Soft, seamless, always the right way</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <button type="submit" aria-label="Submit your vote">Submit</button>
-        </form>
-        <div id="survey-success" class="success" hidden aria-live="polite">
-          Thanks for voting! You’re officially on the early access list. We’ll email you first.
-        </div>
+      <form id="survey-form" action="https://formspree.io/f/xjkabkow" method="POST" class="survey-form">
+        <p class="survey-title">What Would Help Your Child Most?</p>
+        <p class="survey-sub">Vote below — we’re building this with you.</p>
+        <table class="survey-table">
+          <tbody>
+            <tr><td><label class="prod-label"><input type="radio" name="interest" value="2Way Tee" required>2Way Tee</label></td>
+                <td class="tip">Wear it front or back — both work</td></tr>
+            <tr><td><label class="prod-label"><input type="radio" name="interest" value="4Way Tee">4Way Tee</label></td>
+                <td class="tip">Front, back, inside out — every way works</td></tr>
+            <tr><td><label class="prod-label"><input type="radio" name="interest" value="Hoodie">Hoodie</label></td>
+                <td class="tip">Reversible, cozy, and tag-free</td></tr>
+            <tr><td><label class="prod-label"><input type="radio" name="interest" value="Pants">Pants</label></td>
+                <td class="tip">Sensory-friendly, pull-on comfort</td></tr>
+            <tr><td><label class="prod-label"><input type="radio" name="interest" value="Beanie">Beanie</label></td>
+                <td class="tip">Soft, seamless, always the right way</td></tr>
+          </tbody>
+        </table>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="survey-success" class="success" hidden>
+        Thanks for voting! You’re officially on the early access list. We’ll email you first.
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title">Still Have Questions? We've Got You.</h2>
-    <p style="margin-top:-.4rem; color:var(--muted)">Short answers. No fluff. Just like our clothes.</p>
+  <section class="faq">
+    <h2>Still Have Questions? We've Got You.</h2>
+    <p style="margin-top:-.4rem;color:var(--muted)">Short answers. No fluff. Just like our clothes.</p>
 
     <p><strong>What fabric do you use?</strong>
       A soft cotton-blend with stretch — no tags, no rough seams, just buttery comfort made for sensitive skin.</p>
@@ -293,50 +185,30 @@
     <p><strong>Who is this for?</strong>
       Kids ages 4+ who struggle with dressing or sensory issues — and the parents who want mornings to go smoother.</p>
 
-    <div class="cta-center" style="margin-top:1.1rem">
+    <div class="cta-center">
       <a href="#waitlist" class="btn">Get 25% Off – Join the Waitlist</a>
     </div>
   </section>
 
-  <!-- Lightweight JS to show custom success messages without leaving the page -->
+  <!-- JS to show custom success messages -->
   <script>
-    (function () {
-      function ajaxify(formId, successId) {
-        const form = document.getElementById(formId);
-        const success = document.getElementById(successId);
-        if (!form || !success) return;
-
-        form.addEventListener('submit', async function (e) {
-          e.preventDefault();
-          const btn = form.querySelector('button[type="submit"]');
-          if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
-
-          try {
-            const fd = new FormData(form);
-            const res = await fetch(form.action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' }});
-            // We consider any 2xx as success for showing our custom message
-            if (res.ok) {
-              form.reset();
-              form.style.display = 'none';
-              success.hidden = false;
-            } else {
-              // fallback success UX even if Formspree returns non-2xx
-              form.reset();
-              form.style.display = 'none';
-              success.hidden = false;
-            }
-          } catch (err) {
-            // Network hiccup: still show success copy per your spec, to avoid friction
-            form.reset();
-            form.style.display = 'none';
-            success.hidden = false;
-          }
-        });
-      }
-
-      ajaxify('signup-form', 'signup-success');
-      ajaxify('survey-form', 'survey-success');
-    })();
+    function ajaxify(id, successId){
+      const form=document.getElementById(id);
+      const success=document.getElementById(successId);
+      if(!form)return;
+      form.addEventListener('submit',async e=>{
+        e.preventDefault();
+        const data=new FormData(form);
+        const btn=form.querySelector('button');
+        if(btn) btn.disabled=true;
+        try{
+          await fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
+        }catch{}
+        form.reset();form.style.display='none';success.hidden=false;
+      });
+    }
+    ajaxify('signup-form','signup-success');
+    ajaxify('survey-form','survey-success');
   </script>
 </body>
 </html>
