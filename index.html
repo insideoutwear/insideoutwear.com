@@ -206,9 +206,48 @@ section p{margin-bottom:1rem;}
 .footer-cta .btn:hover{
   background:#f4f4f4;
 }
+
+/* === added styles for header nav + footer links === */
+.top-nav{
+  display:flex;
+  gap:1rem;
+  justify-content:center;
+  align-items:center;
+  padding:.75rem 1rem;
+  background:#fff;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+.top-nav a{
+  color:var(--heading);
+  text-decoration:none;
+  font-weight:700;
+}
+.top-nav a:hover{ text-decoration:underline; }
+
+.site-footer{
+  text-align:center;
+  padding:2rem 1rem;
+  color:var(--muted);
+}
+.site-footer a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:700;
+}
+.site-footer a:hover{ text-decoration:underline; }
 </style>
 </head>
 <body>
+
+<!-- TOP NAV (added) -->
+<nav class="top-nav" aria-label="Primary">
+  <a href="/">Home</a>
+  <a href="/privacy-policy/">Privacy Policy</a>
+  <a href="/terms-of-service/">Terms of Service</a>
+</nav>
 
 <!-- HERO -->
 <header>
@@ -311,6 +350,13 @@ section p{margin-bottom:1rem;}
   <p>Join the waitlist now for 25% off + early access.</p>
   <a href="#waitlist" class="btn">Get 25% Off – Join the Waitlist</a>
 </section>
+
+<!-- SITE FOOTER (added) -->
+<footer class="site-footer" role="contentinfo">
+  <a href="/privacy-policy/">Privacy Policy</a>
+  <span aria-hidden="true"> · </span>
+  <a href="/terms-of-service/">Terms of Service</a>
+</footer>
 
 <!-- JS for custom success messages -->
 <script>
